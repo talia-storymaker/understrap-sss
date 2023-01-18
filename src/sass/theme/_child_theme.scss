@@ -1,0 +1,121 @@
+/* mixins */
+
+@mixin primary-background {
+    background: $primary;
+    color: #fff;
+    a {
+        color: $primary-light;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+/* navbar */
+
+.navbar {
+    font-family: $gravity-bold;
+    text-transform: uppercase;
+    background-image: url('/styles/images/collage-banner.png');
+    background-blend-mode: luminosity;
+    overflow: hidden;
+}
+
+.navbar-toggler {
+    background: #000;
+}
+
+.navbar-brand img {
+    filter: drop-shadow(0 0 10px black) drop-shadow(0 0 5px black);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    background: $transparent-dark;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    background: #fff;
+    color: $primary;
+}
+
+/* content */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $titlewave;
+    a {
+        text-decoration: none;
+        border-bottom: 1px $primary solid;
+    }
+}
+
+body {
+    font-family: $crimson-text;
+    font-size: 1.1em;
+}
+
+aside {
+    margin-bottom: 20px;
+}
+
+.wp-post-image {
+    margin-bottom: 1em;
+}
+
+.entry-meta {
+    margin-bottom: 1em;
+}
+
+.entry-content p {
+    margin-bottom: 1.5em;
+}
+
+.entry-footer {
+    margin-bottom: 2em;
+}
+
+/* sidebar */
+
+aside li {
+    list-style-type: none;
+    background: url('/styles/images/aos-logo-bullet.png') no-repeat left center;
+    padding-left: 40px;
+    min-height: 20px;
+    margin-bottom: 10px;
+}
+
+.tag-cloud-link {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* forms */
+
+input, button {
+    font-family: $gravity-bold;
+}
+
+/* comments */
+
+.comments-area {
+    margin-top: 2em;
+}
+
+/* footer */
+
+#wrapper-footer {
+    @include primary-background;
+}
+
+/* font-face */
+
+@font-face {
+    font-family: GravityBold;
+    src: url("/styles/fonts/Gravity-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: TitleWave;
+    src: url("/styles/fonts/titlewv.ttf");
+}

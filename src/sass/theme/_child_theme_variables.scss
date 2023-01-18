@@ -1,0 +1,14 @@
+@use 'sass:color';
+
+/* colors */
+
+$primary: #004d99;
+$primary-light: color.scale($primary, $lightness: 70%);
+
+$transparent-dark: rgba(0, 0, 0, .5);
+
+/* fonts */
+
+$gravity-bold: GravityBold, 'Segoe UI', Helvetica, sans-serif;
+$titlewave: TitleWave, 'Book Antiqua', serif;
+$crimson-text: 'Crimson Text', 'Book Antiqua', serif;
