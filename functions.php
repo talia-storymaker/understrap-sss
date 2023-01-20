@@ -88,9 +88,38 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 
+
 /**
  * Display site info (e.g. for the footer).
  */
 function understrap_site_info() {
 	echo 'Small Screen Superman is a Superman fansite by Talia Joy DeGisi Hatfield. Superman &copy; DC Comics. Site text &copy; Talia Hatfield.<br /><a href="/">Site Home</a> - <a href="/blog">Blog Home</a>';
 }
+
+
+
+/**
+ * Remove some attributes from featured images so they will display at full size.
+ */
+function understrapsss_simplify_fimage($html) {
+	if ($html) {
+		$dom = new DOMDocument;
+		$dom->loadHTML($html);
+		$img = $dom->getElementsByTagName('img')[0];
+		if ($img->hasAttribute('srcset')) {
+			$img->removeAttribute('srcset');
+		}
+		if ($img->hasAttribute('sizes')) {
+			$img->removeAttribute('sizes');
+		}
+		if ($img->hasAttribute('width')) {
+			$img->removeAttribute('width');
+		}
+		if ($img->hasAttribute('height')) {
+			$img->removeAttribute('height');
+		}
+		$html = $dom->saveHTML($img);
+		return $html;
+	}
+}
+add_filter( 'post_thumbnail_html', 'understrapsss_simplify_fimage' );
