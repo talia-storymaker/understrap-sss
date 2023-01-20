@@ -4,8 +4,14 @@
 
 $primary: #004d99;
 $primary-light: color.scale($primary, $lightness: 70%);
+$secondary: #007aa3;
 
 $transparent-dark: rgba(0, 0, 0, .5);
+
+/* shadows */
+
+$shadow-standard: 0 0 10px;
+$shadow-small: 0 0 5px;
 
 /* fonts */
 

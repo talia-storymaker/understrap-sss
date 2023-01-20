@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* colors */
+/* shadows */
 /* fonts */
 *,
 *::before,
@@ -433,7 +434,7 @@ progress {
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #004d99;
-  --bs-secondary: #6c757d;
+  --bs-secondary: #007aa3;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -441,7 +442,7 @@ progress {
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 0, 77, 153;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-rgb: 0, 122, 163;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -569,13 +570,13 @@ progress {
 
 .table-secondary {
   --bs-table-color: #000;
-  --bs-table-bg: #e2e3e5;
-  --bs-table-border-color: #cbccce;
-  --bs-table-striped-bg: #d7d8da;
+  --bs-table-bg: #cce4ed;
+  --bs-table-border-color: #b8cdd5;
+  --bs-table-striped-bg: #c2d9e1;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #cbccce;
+  --bs-table-active-bg: #b8cdd5;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #d1d2d4;
+  --bs-table-hover-bg: #bdd3db;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -873,7 +874,7 @@ progress {
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #004d99;
-  --bs-secondary: #6c757d;
+  --bs-secondary: #007aa3;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -881,7 +882,7 @@ progress {
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 0, 77, 153;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-rgb: 0, 122, 163;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -930,7 +931,7 @@ progress {
 
 .text-bg-secondary {
   color: #fff !important;
-  background-color: RGBA(108, 117, 125, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(0, 122, 163, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
@@ -971,10 +972,10 @@ progress {
 }
 
 .link-secondary {
-  color: #6c757d !important;
+  color: #007aa3 !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #565e64 !important;
+  color: #006282 !important;
 }
 
 .link-success {
@@ -5305,16 +5306,16 @@ progress {
 
 .has-secondary-color,
 .has-secondary-color:visited {
-  color: #6c757d;
+  color: #007aa3;
 }
 
 .has-secondary-background-color {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #007aa3;
+  border-color: #007aa3;
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-secondary-color {
-  color: #6c757d;
+  color: #007aa3;
 }
 
 .has-success-color,
