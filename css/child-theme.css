@@ -15020,12 +15020,20 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 }
 
 body {
-  font-family: "Crimson Text", "Book Antiqua", serif;
+  font-family: Georgia, serif;
   font-size: 1.1em;
 }
 
+#primary {
+  padding-left: var(--bs-gutter-x);
+  padding-right: var(--bs-gutter-x);
+}
+
 .wp-post-image {
+  display: block;
   margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .entry-meta {
@@ -15034,6 +15042,9 @@ body {
 }
 
 .entry-content p {
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.5em;
 }
 
@@ -15053,17 +15064,21 @@ aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .
   color: #fff;
   padding: 10px;
   margin-bottom: 15px;
-  background-image: url("/superman-right.png");
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  background-size: 2.5em;
-  padding-left: 100px;
 }
 aside h2 a, aside .h2 a, aside h3 a, aside .h3 a, aside h4 a, aside .h4 a, aside h5 a, aside .h5 a, aside h6 a, aside .h6 a {
   color: #94caff;
 }
 aside h2 a:hover, aside .h2 a:hover, aside h3 a:hover, aside .h3 a:hover, aside h4 a:hover, aside .h4 a:hover, aside h5 a:hover, aside .h5 a:hover, aside h6 a:hover, aside .h6 a:hover {
   color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
+    padding-left: 100px;
+    background-image: url("/superman-right.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 2.5em;
+  }
 }
 
 aside li {
@@ -15090,17 +15105,21 @@ input, button, .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .wo
   color: #fff;
   padding: 10px;
   margin-bottom: 15px;
-  background-image: url("/superman-right.png");
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  background-size: 2.5em;
-  padding-left: 100px;
 }
 .comment-reply-title a {
   color: #94caff;
 }
 .comment-reply-title a:hover {
   color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .comment-reply-title {
+    padding-left: 100px;
+    background-image: url("/superman-right.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 2.5em;
+  }
 }
 
 .comments-area {
