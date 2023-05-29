@@ -15055,6 +15055,37 @@ body {
   justify-content: space-between;
 }
 
+/* tierlists */
+.tierlist-heading {
+  font-family: GravityBold, "Segoe UI", Helvetica, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.s-tier {
+  background-color: #ea1c18;
+}
+
+.a-tier {
+  background-color: #e97119;
+}
+
+.b-tier {
+  background-color: #ede702;
+}
+
+.c-tier {
+  background-color: #1cc500;
+}
+
+.d-tier {
+  background-color: #0100c6;
+}
+
 /* sidebar */
 aside {
   margin-bottom: 60px;
