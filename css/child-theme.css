@@ -15058,14 +15058,16 @@ body {
 /* tierlists */
 .tierlist-heading {
   font-family: GravityBold, "Segoe UI", Helvetica, sans-serif;
-  background-color: #000;
-  color: #fff;
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 3px 7px;
-  display: inline-block;
-  border-width: 15px;
+  border-width: 0 0 15px;
   border-style: solid;
+  margin-bottom: 1rem;
+}
+
+.tierlist-heading::first-letter {
+  font-size: 4rem;
 }
 
 .s-tier {
