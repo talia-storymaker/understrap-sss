@@ -1,10 +1,11 @@
 @use 'sass:color';
 
-/* colors */
+/* color values */
 
 $primary: #004d99;
 $primary-light: color.scale($primary, $lightness: 70%);
-$secondary: #007aa3;
+$primary-lighter: color.scale($primary, $lightness: 90%);
+$secondary: #a3211a;
 
 $transparent-dark: rgba(0, 0, 0, .5);
 

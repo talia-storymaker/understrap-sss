@@ -99,6 +99,40 @@ function understrap_site_info() {
 
 
 /**
+ * Post nav - removing font awesome icons
+ */
+function understrap_post_nav() {
+	global $post;
+	if ( ! $post ) {
+		return;
+	}
+
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="container navigation post-navigation">
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+		<div class="d-flex nav-links justify-content-between">
+			<?php
+			if ( get_previous_post_link() ) {
+				previous_post_link( '<span class="nav-previous">%link</span>', _x( '%title', 'Previous post link', 'understrap' ) );
+			}
+			if ( get_next_post_link() ) {
+				next_post_link( '<span class="nav-next">%link</span>', _x( '%title', 'Next post link', 'understrap' ) );
+			}
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .post-navigation -->
+	<?php
+}
+
+
+
+/**
  * Remove some attributes from featured images so they will display at full size.
  */
 function understrapsss_simplify_fimage($html) {
@@ -123,3 +157,38 @@ function understrapsss_simplify_fimage($html) {
 	}
 }
 add_filter( 'post_thumbnail_html', 'understrapsss_simplify_fimage' );
+
+
+/**
+ * Literaly just fixing a typo in the original function - remove when it gets fixed
+ */
+function understrap_bootstrap_comment_form_fields( $fields ) {
+
+	$replace = array(
+		'<p class="' => '<div class="form-group mb-3 ',
+		'<input'     => '<input class="form-control" ',
+		'</p>'       => '</div>',
+	);
+
+	if ( isset( $fields['author'] ) ) {
+		$fields['author'] = strtr( $fields['author'], $replace );
+	}
+	if ( isset( $fields['email'] ) ) {
+		$fields['email'] = strtr( $fields['email'], $replace );
+	}
+	if ( isset( $fields['url'] ) ) {
+		$fields['url'] = strtr( $fields['url'], $replace );
+	}
+
+	$replace = array(
+		'<p class="' => '<div class="form-group mb-3 form-check ',
+		'<input'     => '<input class="form-check-input" ',
+		'<label'     => '<label class="form-check-label" ',
+		'</p>'       => '</div>',
+	);
+	if ( isset( $fields['cookies'] ) ) {
+		$fields['cookies'] = strtr( $fields['cookies'], $replace );
+	}
+
+	return $fields;
+}
