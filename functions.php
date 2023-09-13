@@ -9,7 +9,6 @@
 defined( 'ABSPATH' ) || exit;
 
 
-
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
  */
@@ -21,7 +20,6 @@ function understrap_remove_scripts() {
 	wp_deregister_script( 'understrap-scripts' );
 }
 add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
-
 
 
 /**
@@ -47,7 +45,6 @@ function theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 
-
 /**
  * Load the child theme's text domain
  */
@@ -55,7 +52,6 @@ function add_child_theme_textdomain() {
 	load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
-
 
 
 /**
@@ -70,7 +66,6 @@ function understrap_default_bootstrap_version() {
 	return 'bootstrap5';
 }
 add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_default_bootstrap_version', 20 );
-
 
 
 /**
@@ -88,14 +83,12 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 
-
 /**
  * Display site info (e.g. for the footer).
  */
 function understrap_site_info() {
 	echo 'Small Screen Superman is a Superman fansite by Talia Joy DeGisi Hatfield. Superman &copy; DC Comics. Site text &copy; Talia Hatfield.<br /><a href="/">Site Home</a> - <a href="/blog">Blog Home</a>';
 }
-
 
 
 /**
@@ -129,7 +122,6 @@ function understrap_post_nav() {
 	</nav><!-- .post-navigation -->
 	<?php
 }
-
 
 
 /**
@@ -184,7 +176,6 @@ function understrap_posted_on() {
 }
 
 
-
 /**
  * Remove some attributes from featured images so they will display at full size.
  */
@@ -213,7 +204,56 @@ add_filter( 'post_thumbnail_html', 'understrapsss_simplify_fimage' );
 
 
 /**
- * Literaly just fixing a typo in the original function - remove when it gets fixed
+ * Make search button widget use secondary color, not primary.
+ */
+function understrap_add_block_widget_search_classes( $block_content, $block ) {
+	$search  = array(
+		'wp-block-search__input ',
+		'wp-block-search__input"',
+		'wp-block-search__button ',
+	);
+	$replace = array(
+		'wp-block-search__input form-control ',
+		'wp-block-search__input form-control"',
+		'wp-block-search__button btn btn-secondary ',
+	);
+
+	if ( isset( $block['attrs']['buttonPosition'] ) && 'button-inside' === $block['attrs']['buttonPosition'] ) {
+		$search[]  = 'wp-block-search__inside-wrapper';
+		$replace[] = 'wp-block-search__inside-wrapper input-group';
+
+		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			$search[]  = '<button';
+			$search[]  = '</button>';
+			$replace[] = '<div class="input-group-append"><button';
+			$replace[] = '</button></div>';
+		}
+	}
+
+	return str_replace( $search, $replace, $block_content );
+}
+
+
+/**
+ * Remove "..." in Read More link
+ */
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+	if ( is_admin() || ! get_the_ID() ) {
+		return $post_excerpt;
+	}
+
+	$permalink = esc_url( get_permalink( (int) get_the_ID() ) ); // @phpstan-ignore-line -- post exists
+
+	return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . $permalink . '">' . __(
+		'Read More',
+		'understrap'
+	) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
+
+}
+
+
+/**
+ * Literally just fixing a typo in the original function - remove when it gets fixed
  */
 function understrap_bootstrap_comment_form_fields( $fields ) {
 

@@ -11099,7 +11099,7 @@ body {
 }
 
 a:hover {
-  background: #dbedff;
+  background-color: #dbedff;
 }
 
 /* navbar */
@@ -11115,11 +11115,11 @@ a:hover {
   transition: none;
 }
 .navbar a:hover {
-  background: transparent;
+  background-color: transparent;
 }
 
 .navbar-toggler {
-  background: #000;
+  background-color: #000;
 }
 
 .navbar-brand img {
@@ -11128,11 +11128,11 @@ a:hover {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-  background: #fff;
+  background-color: #fff;
   color: #004d99;
 }
 
@@ -11222,7 +11222,7 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 
 /* pagination */
 a.page-link:hover {
-  background: #dbedff;
+  background-color: #dbedff;
 }
 
 /* sidebar */
@@ -11230,7 +11230,7 @@ aside {
   margin-bottom: 60px;
 }
 aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
-  background: #004d99;
+  background-color: #004d99;
   color: #fff;
   padding: 10px;
   margin-bottom: 15px;
@@ -11240,7 +11240,7 @@ aside h2 a, aside .h2 a, aside h3 a, aside .h3 a, aside h4 a, aside .h4 a, aside
 }
 aside h2 a:hover, aside .h2 a:hover, aside h3 a:hover, aside .h3 a:hover, aside h4 a:hover, aside .h4 a:hover, aside h5 a:hover, aside .h5 a:hover, aside h6 a:hover, aside .h6 a:hover {
   color: #fff;
-  background: transparent;
+  background-color: transparent;
 }
 @media screen and (min-width: 1200px) {
   aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
@@ -11254,7 +11254,9 @@ aside h2 a:hover, aside .h2 a:hover, aside h3 a:hover, aside .h3 a:hover, aside 
 
 aside li {
   list-style-type: none;
-  background: url("/styles/images/aos-logo-bullet.png") no-repeat left center;
+  background-image: url("/styles/images/aos-logo-bullet.png");
+  background-repeat: no-repeat;
+  background-position: left center;
   padding-left: 40px;
   min-height: 20px;
   margin-bottom: 10px;
@@ -11270,10 +11272,27 @@ input, button, .btn {
   font-family: GravityBold, "Segoe UI", Helvetica, sans-serif;
 }
 
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
+  background-color: #821a15;
+}
+
+.understrap-read-more-link {
+  background-image: url("/styles/images/aos-logo-bullet.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 40px;
+  background-blend-mode: screen;
+  background-size: 25px;
+  transition: all 0.15s ease-in-out;
+}
+.understrap-read-more-link:hover, .understrap-read-more-link:active, .understrap-read-more-link:focus {
+  background-size: 29px;
+}
+
 label:not(.form-check-label) {
-  background: #004d99;
+  background-color: #004d99;
   color: #fff;
-  background: #a3211a;
+  background-color: #a3211a;
   padding: 0.25em 1em;
   border-radius: 0.8em 0.8em 0 0;
   position: relative;
@@ -11283,11 +11302,11 @@ label:not(.form-check-label) a {
 }
 label:not(.form-check-label) a:hover {
   color: #fff;
-  background: transparent;
+  background-color: transparent;
 }
 label:not(.form-check-label)::after {
   content: "";
-  background: #a3211a;
+  background-color: #a3211a;
   height: 1em;
   width: 1em;
   display: block;
@@ -11301,9 +11320,17 @@ label:not(.form-check-label)::after {
   width: max-content;
 }
 
+form[role=search] button, form[role=search] input[type=submit] {
+  background-image: url("/styles/images/eye-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 7px top 55%;
+  padding-right: 40px;
+  background-size: 1.85rem;
+}
+
 /* comments */
 .comment-reply-title {
-  background: #004d99;
+  background-color: #004d99;
   color: #fff;
   padding: 10px;
   margin-bottom: 15px;
@@ -11313,7 +11340,7 @@ label:not(.form-check-label)::after {
 }
 .comment-reply-title a:hover {
   color: #fff;
-  background: transparent;
+  background-color: transparent;
 }
 @media screen and (min-width: 1200px) {
   .comment-reply-title {
@@ -11329,9 +11356,17 @@ label:not(.form-check-label)::after {
   margin-top: 2em;
 }
 
+.comment-form input[type=submit] {
+  background-image: url("/styles/images/speech-bubble.svg");
+  background-repeat: no-repeat;
+  background-position: right 7px top 55%;
+  padding-right: 40px;
+  background-size: 1.75rem;
+}
+
 /* footer */
 #wrapper-footer {
-  background: #004d99;
+  background-color: #004d99;
   color: #fff;
 }
 #wrapper-footer a {
@@ -11339,7 +11374,7 @@ label:not(.form-check-label)::after {
 }
 #wrapper-footer a:hover {
   color: #fff;
-  background: transparent;
+  background-color: transparent;
 }
 
 /* font-face */

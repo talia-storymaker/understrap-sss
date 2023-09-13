@@ -7,13 +7,13 @@
 /* mixins */
 
 @mixin dark-background {
-    background: $primary;
+    background-color: $primary;
     color: #fff;
     a {
         color: $primary-light;
         &:hover {
             color: #fff;
-            background: transparent;
+            background-color: transparent;
         }
     }
 }
@@ -45,7 +45,7 @@ body {
 
 a {
     &:hover {
-        background: $primary-lighter;
+        background-color: $primary-lighter;
     }
 }
 
@@ -62,12 +62,12 @@ a {
     overflow: hidden;
     transition: none;
     a:hover {
-        background: transparent;
+        background-color: transparent;
     }
 }
 
 .navbar-toggler {
-    background: #000;
+    background-color: #000;
 }
 
 .navbar-brand img {
@@ -76,11 +76,11 @@ a {
 
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
-    background: $transparent-dark;
+    background-color: $transparent-dark;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-    background: #fff;
+    background-color: #fff;
     color: $primary;
 }
 
@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 /* pagination */
 
 a.page-link:hover {
-    background: $primary-lighter;
+    background-color: $primary-lighter;
 }
 
 /* sidebar */
@@ -187,7 +187,9 @@ aside {
 
 aside li {
     list-style-type: none;
-    background: url('/styles/images/aos-logo-bullet.png') no-repeat left center;
+    background-image: url('/styles/images/aos-logo-bullet.png');
+    background-repeat: no-repeat; 
+    background-position: left center;
     padding-left: 40px;
     min-height: 20px;
     margin-bottom: 10px;
@@ -204,15 +206,34 @@ input, button, .btn {
     font-family: $gravity-bold;
 }
 
+.btn-secondary {
+    &:hover, &:active, &:focus {
+        background-color: $secondary-darker;
+    }
+}
+
+.understrap-read-more-link {
+    background-image: url('/styles/images/aos-logo-bullet.png');
+    background-repeat: no-repeat; 
+    background-position: right 10px center;
+    padding-right: 40px;
+    background-blend-mode: screen;
+    background-size: 25px;
+    transition: all .15s ease-in-out;
+    &:hover, &:active, &:focus {
+        background-size: 29px;
+    }
+}
+
 label:not(.form-check-label) {
     @include dark-background;
-    background: $secondary;
+    background-color: $secondary;
     padding: .25em 1em;
     border-radius: .8em .8em 0 0;
     position: relative;
     &::after {
         content: '';
-        background: $secondary;
+        background-color: $secondary;
         height: 1em;
         width: 1em;
         display: block;
@@ -226,6 +247,16 @@ label:not(.form-check-label) {
     width: max-content;
 }
 
+form[role=search] {
+    button, input[type=submit] {
+        background-image: url('/styles/images/eye-icon.svg');
+        background-repeat: no-repeat; 
+        background-position: right 7px top 55%;
+        padding-right: 40px;
+        background-size: 1.85rem;
+    }
+}
+
 /* comments */
 
 .comment-reply-title {
@@ -234,6 +265,14 @@ label:not(.form-check-label) {
 
 .comments-area {
     margin-top: 2em;
+}
+
+.comment-form input[type=submit] {
+    background-image: url('/styles/images/speech-bubble.svg');
+    background-repeat: no-repeat; 
+    background-position: right 7px top 55%;
+    padding-right: 40px;
+    background-size: 1.75rem;
 }
 
 /* footer */
