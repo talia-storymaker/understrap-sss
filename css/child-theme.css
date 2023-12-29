@@ -11098,6 +11098,11 @@ body {
   font-size: 1.1em;
 }
 
+@media screen and (min-width: 38.75rem) {
+  body {
+    background-color: #edeffa;
+  }
+}
 a:hover {
   background-color: #dbedff;
 }
@@ -11109,7 +11114,7 @@ a:hover {
   background-image: url("/styles/images/collage-banner.png");
   background-blend-mode: luminosity;
   box-shadow: 0 0 5px #004d99;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   background-position-x: var(--nav-bg-position);
   overflow: hidden;
   transition: none;
@@ -11137,9 +11142,9 @@ a:hover {
 }
 
 /* content */
-@media (min-width: 1400px) {
+@media (min-width: 87.5em) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 1320px;
+    max-width: 82.5rem;
   }
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -11153,12 +11158,17 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 }
 
 #primary {
-  padding-left: var(--bs-gutter-x);
-  padding-right: var(--bs-gutter-x);
+  padding: 0 var(--bs-gutter-x) 0.5rem;
+  background-color: #fff;
 }
 
+@media screen and (min-width: 38.75rem) {
+  #primary {
+    padding-top: 1rem;
+  }
+}
 .post {
-  border-bottom: 5px #a3211a solid;
+  border-bottom: 0.3rem #a3211a solid;
   margin-bottom: 2em;
 }
 
@@ -11174,7 +11184,7 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 }
 
 .single .entry-header {
-  border-bottom: 2px #a3211a dashed;
+  border-bottom: 0.125rem #a3211a dashed;
   margin-bottom: 1em;
 }
 
@@ -11208,7 +11218,7 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 }
 
 .single .entry-footer {
-  border-top: 2px #a3211a dashed;
+  border-top: 0.125rem #a3211a dashed;
   padding-top: 1em;
 }
 
@@ -11234,14 +11244,21 @@ a.page-link:hover {
 }
 
 /* sidebar */
+@media screen and (min-width: 75rem) {
+  #right-sidebar {
+    padding-left: 2rem;
+  }
+}
 aside {
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
+  background-color: #fff;
 }
 aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
   background-color: #004d99;
   color: #fff;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 0.625rem;
+  margin-bottom: 0.9rem;
+  margin: 0;
 }
 aside h2 a, aside .h2 a, aside h3 a, aside .h3 a, aside h4 a, aside .h4 a, aside h5 a, aside .h5 a, aside h6 a, aside .h6 a {
   color: #94caff;
@@ -11250,14 +11267,17 @@ aside h2 a:hover, aside .h2 a:hover, aside h3 a:hover, aside .h3 a:hover, aside 
   color: #fff;
   background-color: transparent;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75em) {
   aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
-    padding-left: 100px;
+    padding-left: 6.25rem;
     background-image: url("/superman-right.png");
     background-repeat: no-repeat;
-    background-position: 10px center;
+    background-position: 0.625rem center;
     background-size: 2.5em;
   }
+}
+aside h2 + *, aside .h2 + *, aside h3 + *, aside .h3 + *, aside h4 + *, aside .h4 + *, aside h5 + *, aside .h5 + *, aside h6 + *, aside .h6 + * {
+  padding: 1rem;
 }
 
 aside li {
@@ -11265,14 +11285,22 @@ aside li {
   background-image: url("/styles/images/aos-logo-bullet.png");
   background-repeat: no-repeat;
   background-position: left center;
-  padding-left: 40px;
-  min-height: 20px;
-  margin-bottom: 10px;
+  padding-left: 2.5rem;
+  min-height: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.widget_search {
+  background-color: transparent;
+}
+
+ul.wp-block-latest-posts.wp-block-latest-posts__list {
+  padding: 1rem;
 }
 
 .tag-cloud-link {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 /* forms and buttons */
@@ -11287,14 +11315,14 @@ input, button, .btn {
 .understrap-read-more-link {
   background-image: url("/styles/images/aos-logo-bullet.png");
   background-repeat: no-repeat;
-  background-position: right 10px center;
-  padding-right: 40px;
+  background-position: right 0.625rem center;
+  padding-right: 2.5rem;
   background-blend-mode: screen;
-  background-size: 25px;
+  background-size: 1.6rem;
   transition: all 0.15s ease-in-out;
 }
 .understrap-read-more-link:hover, .understrap-read-more-link:active, .understrap-read-more-link:focus {
-  background-size: 29px;
+  background-size: 1.8rem;
 }
 
 label:not(.form-check-label) {
@@ -11331,8 +11359,8 @@ label:not(.form-check-label)::after {
 form[role=search] button, form[role=search] input[type=submit] {
   background-image: url("/styles/images/eye-icon.svg");
   background-repeat: no-repeat;
-  background-position: right 7px top 55%;
-  padding-right: 40px;
+  background-position: right 0.4rem top 55%;
+  padding-right: 2.5rem;
   background-size: 1.85rem;
 }
 
@@ -11340,8 +11368,8 @@ form[role=search] button, form[role=search] input[type=submit] {
 .comment-reply-title {
   background-color: #004d99;
   color: #fff;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 0.625rem;
+  margin-bottom: 0.9rem;
 }
 .comment-reply-title a {
   color: #94caff;
@@ -11350,12 +11378,12 @@ form[role=search] button, form[role=search] input[type=submit] {
   color: #fff;
   background-color: transparent;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75em) {
   .comment-reply-title {
-    padding-left: 100px;
+    padding-left: 6.25rem;
     background-image: url("/superman-right.png");
     background-repeat: no-repeat;
-    background-position: 10px center;
+    background-position: 0.625rem center;
     background-size: 2.5em;
   }
 }
@@ -11367,8 +11395,8 @@ form[role=search] button, form[role=search] input[type=submit] {
 .comment-form input[type=submit] {
   background-image: url("/styles/images/speech-bubble.svg");
   background-repeat: no-repeat;
-  background-position: right 7px top 55%;
-  padding-right: 40px;
+  background-position: right 0.4rem top 55%;
+  padding-right: 2.5rem;
   background-size: 1.75rem;
 }
 
@@ -11399,9 +11427,9 @@ form[role=search] button, form[role=search] input[type=submit] {
 .tierlist-heading {
   font-family: GravityBold, "Segoe UI", Helvetica, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 3px 7px;
-  border-width: 0 0 15px;
+  letter-spacing: 0.2rem;
+  padding: 0.2rem 0.4rem;
+  border-width: 0 0 0.9rem;
   border-style: solid;
   margin-bottom: 1rem;
 }

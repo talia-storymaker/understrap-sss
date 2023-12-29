@@ -20,14 +20,14 @@
 
 @mixin minor-heading {
     @include dark-background;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 0.625rem;
+    margin-bottom: 0.9rem;
 
-    @media screen and (min-width: 1200px) {
-        padding-left: 100px;
+    @media screen and (min-width: 75em) {
+        padding-left: 6.25rem;
         background-image: url('/superman-right.png');
         background-repeat: no-repeat;
-        background-position: 10px center;
+        background-position: 0.625rem center;
         background-size: 2.5em;
     }
 }
@@ -41,6 +41,12 @@
 body {
     font-family: $body-text;
     font-size: 1.1em;
+}
+
+@media screen and (min-width: 38.75rem) {
+    body {
+        background-color: $bg-color;
+    }
 }
 
 a {
@@ -57,7 +63,7 @@ a {
     background-image: url('/styles/images/collage-banner.png');
     background-blend-mode: luminosity;
     box-shadow: $shadow-small $primary;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     background-position-x: var(--nav-bg-position);
     overflow: hidden;
     transition: none;
@@ -86,9 +92,9 @@ a {
 
 /* content */
 
-@media (min-width: 1400px) {
+@media (min-width: 87.5em) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1320px;
+        max-width: 82.5rem;
     }
 }
 
@@ -103,12 +109,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #primary {
-    padding-left: var(--bs-gutter-x);
-    padding-right: var(--bs-gutter-x);
+    padding: 0 var(--bs-gutter-x) .5rem;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 38.75rem) {
+    #primary {
+        padding-top: 1rem;
+    }
 }
 
 .post {
-    border-bottom: 5px $secondary solid;
+    border-bottom: 0.3rem $secondary solid;
     margin-bottom: 2em; 
 }
 
@@ -124,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single .entry-header {
-    border-bottom: 2px $secondary dashed;
+    border-bottom: 0.125rem $secondary dashed;
     margin-bottom: 1em;
 }
 
@@ -158,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single .entry-footer {
-    border-top: 2px $secondary dashed;
+    border-top: 0.125rem $secondary dashed;
     padding-top: 1em;
 }
 
@@ -186,10 +198,21 @@ a.page-link:hover {
 
 /* sidebar */
 
+@media screen and (min-width: 75rem) {
+    #right-sidebar {
+        padding-left: 2rem;
+    }
+}
+
 aside {
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
+    background-color: #fff;
     h2, h3, h4, h5, h6 {
         @include minor-heading;
+        margin: 0;
+        & + * {
+            padding: 1rem;
+        }
     }
 }
 
@@ -198,14 +221,22 @@ aside li {
     background-image: url('/styles/images/aos-logo-bullet.png');
     background-repeat: no-repeat; 
     background-position: left center;
-    padding-left: 40px;
-    min-height: 20px;
-    margin-bottom: 10px;
+    padding-left: 2.5rem;
+    min-height: 1.25rem;
+    margin-bottom: .625rem;
+}
+
+.widget_search {
+    background-color: transparent;
+}
+
+ul.wp-block-latest-posts.wp-block-latest-posts__list {
+    padding: 1rem;
 }
 
 .tag-cloud-link {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 /* forms and buttons */
@@ -223,13 +254,13 @@ input, button, .btn {
 .understrap-read-more-link {
     background-image: url('/styles/images/aos-logo-bullet.png');
     background-repeat: no-repeat; 
-    background-position: right 10px center;
-    padding-right: 40px;
+    background-position: right 0.625rem center;
+    padding-right: 2.5rem;
     background-blend-mode: screen;
-    background-size: 25px;
+    background-size: 1.6rem;
     transition: all .15s ease-in-out;
     &:hover, &:active, &:focus {
-        background-size: 29px;
+        background-size: 1.8rem;
     }
 }
 
@@ -259,8 +290,8 @@ form[role=search] {
     button, input[type=submit] {
         background-image: url('/styles/images/eye-icon.svg');
         background-repeat: no-repeat; 
-        background-position: right 7px top 55%;
-        padding-right: 40px;
+        background-position: right 0.4rem top 55%;
+        padding-right: 2.5rem;
         background-size: 1.85rem;
     }
 }
@@ -278,8 +309,8 @@ form[role=search] {
 .comment-form input[type=submit] {
     background-image: url('/styles/images/speech-bubble.svg');
     background-repeat: no-repeat; 
-    background-position: right 7px top 55%;
-    padding-right: 40px;
+    background-position: right 0.4rem top 55%;
+    padding-right: 2.5rem;
     background-size: 1.75rem;
 }
 
@@ -307,9 +338,9 @@ form[role=search] {
 .tierlist-heading {
     font-family: $gravity-bold;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 3px 7px;
-    border-width: 0 0 15px;
+    letter-spacing: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-width: 0 0 0.9rem;
     border-style: solid;
     margin-bottom: 1rem;
 }
