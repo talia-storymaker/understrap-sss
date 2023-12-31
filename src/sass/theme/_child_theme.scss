@@ -32,6 +32,11 @@
     }
 }
 
+@mixin paper {
+    background-color: #fff;
+    box-shadow: $shadow-paper unquote($primary + "32");
+}
+
 /* universal */
 
 * {
@@ -67,6 +72,7 @@ a {
     background-position-x: var(--nav-bg-position);
     overflow: hidden;
     transition: none;
+    border-bottom: .4rem $secondary solid;
     a:hover {
         background-color: transparent;
     }
@@ -110,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #primary {
     padding: 0 var(--bs-gutter-x) .5rem;
-    background-color: #fff;
+    @include paper;
 }
 
 @media screen and (min-width: 38.75rem) {
@@ -206,7 +212,7 @@ a.page-link:hover {
 
 aside {
     margin-bottom: 3.75rem;
-    background-color: #fff;
+    @include paper;
     h2, h3, h4, h5, h6 {
         @include minor-heading;
         margin: 0;
@@ -228,6 +234,16 @@ aside li {
 
 .widget_search {
     background-color: transparent;
+    box-shadow: none;
+}
+
+.textwidget > :last-child {
+    padding: 0;
+    margin: 0;
+}
+
+.textwidget li:last-child {
+    margin: 0;
 }
 
 ul.wp-block-latest-posts.wp-block-latest-posts__list {

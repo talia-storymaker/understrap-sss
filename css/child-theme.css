@@ -11118,6 +11118,7 @@ a:hover {
   background-position-x: var(--nav-bg-position);
   overflow: hidden;
   transition: none;
+  border-bottom: 0.4rem #a3211a solid;
 }
 .navbar a:hover {
   background-color: transparent;
@@ -11160,6 +11161,7 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 #primary {
   padding: 0 var(--bs-gutter-x) 0.5rem;
   background-color: #fff;
+  box-shadow: 1px 1px 3px #004d9932;
 }
 
 @media screen and (min-width: 38.75rem) {
@@ -11252,6 +11254,7 @@ a.page-link:hover {
 aside {
   margin-bottom: 3.75rem;
   background-color: #fff;
+  box-shadow: 1px 1px 3px #004d9932;
 }
 aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
   background-color: #004d99;
@@ -11292,6 +11295,16 @@ aside li {
 
 .widget_search {
   background-color: transparent;
+  box-shadow: none;
+}
+
+.textwidget > :last-child {
+  padding: 0;
+  margin: 0;
+}
+
+.textwidget li:last-child {
+  margin: 0;
 }
 
 ul.wp-block-latest-posts.wp-block-latest-posts__list {
