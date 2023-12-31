@@ -11097,12 +11097,12 @@ body {
   font-family: Georgia, serif;
   font-size: 1.1em;
 }
-
 @media screen and (min-width: 38.75rem) {
   body {
     background-color: #edeffa;
   }
 }
+
 a:hover {
   background-color: #dbedff;
 }
@@ -11160,15 +11160,19 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 
 #primary {
   padding: 0 var(--bs-gutter-x) 0.5rem;
-  background-color: #fff;
-  box-shadow: 1px 1px 3px #004d9932;
 }
-
+@media screen and (min-width: 38.75rem) {
+  #primary {
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #004d9932;
+  }
+}
 @media screen and (min-width: 38.75rem) {
   #primary {
     padding-top: 1rem;
   }
 }
+
 .post {
   border-bottom: 0.3rem #a3211a solid;
   margin-bottom: 2em;
@@ -11241,20 +11245,38 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 }
 
 /* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
 a.page-link:hover {
   background-color: #dbedff;
 }
 
 /* sidebar */
+#right-sidebar {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 48rem) {
+  #right-sidebar {
+    margin-top: 0;
+  }
+}
 @media screen and (min-width: 75rem) {
   #right-sidebar {
     padding-left: 2rem;
   }
 }
+
 aside {
   margin-bottom: 3.75rem;
-  background-color: #fff;
-  box-shadow: 1px 1px 3px #004d9932;
+}
+@media screen and (min-width: 38.75rem) {
+  aside {
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #004d9932;
+  }
 }
 aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
   background-color: #004d99;
