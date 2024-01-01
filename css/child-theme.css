@@ -11102,6 +11102,15 @@ body {
     background-color: #edeffa;
   }
 }
+@media screen and (min-width: 48rem) {
+  body {
+    background-image: url("/aos-logo-color-50.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 1rem right -2rem;
+    background-attachment: fixed;
+    background-size: 40%;
+  }
+}
 
 a:hover {
   background-color: #dbedff;
@@ -11278,6 +11287,11 @@ aside {
     box-shadow: 1px 1px 3px #004d9932;
   }
 }
+@media screen and (min-width: 38.75rem) {
+  aside {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
 aside h2, aside .h2, aside h3, aside .h3, aside h4, aside .h4, aside h5, aside .h5, aside h6, aside .h6 {
   background-color: #004d99;
   color: #fff;
@@ -11313,6 +11327,10 @@ aside li {
   padding-left: 2.5rem;
   min-height: 1.25rem;
   margin-bottom: 0.625rem;
+}
+
+aside aside {
+  background-color: transparent;
 }
 
 .widget_search {

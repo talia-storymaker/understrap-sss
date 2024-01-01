@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.0.0 (https://github.com/talia-storymaker/understrap-sss)
-  * Copyright 2013-2023 Talia (DeGisi) Hatfield (https://github.com/talia-storymaker)
+  * Copyright 2013-2024 Talia (DeGisi) Hatfield (https://github.com/talia-storymaker)
   * Licensed under GPL-3.0 (undefined)
   */
 (function (global, factory) {
