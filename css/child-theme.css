@@ -11094,8 +11094,8 @@ a.skip-link:not(:focus):not(:focus-within) {
 }
 
 body {
-  font-family: Georgia, serif;
-  font-size: 1.1em;
+  font-family: "Crimson Text", serif;
+  font-size: 1.25em;
 }
 @media screen and (min-width: 38.75rem) {
   body {
