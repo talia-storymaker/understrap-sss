@@ -170,6 +170,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1em;
 }
 
+.wp-block-image, .wp-block-embed {
+    margin-bottom: 1.5rem;
+}
+
+.wp-block-column :last-child {
+    margin-bottom: 0;
+}
+
 .entry-footer {
     margin-bottom: 2em;
     font-size: .9em;

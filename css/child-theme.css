@@ -11224,6 +11224,14 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
   margin-bottom: 1em;
 }
 
+.wp-block-image, .wp-block-embed {
+  margin-bottom: 1.5rem;
+}
+
+.wp-block-column :last-child {
+  margin-bottom: 0;
+}
+
 .entry-footer {
   margin-bottom: 2em;
   font-size: 0.9em;
