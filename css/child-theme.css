@@ -11095,7 +11095,7 @@ a.skip-link:not(:focus):not(:focus-within) {
 
 body {
   font-family: "Crimson Text", serif;
-  font-size: 1.25em;
+  font-size: 1.3em;
 }
 @media screen and (min-width: 38.75rem) {
   body {
@@ -11188,7 +11188,7 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
 }
 
 .post:last-of-type {
-  border-bottom: none;
+  border-bottom-width: 0;
 }
 
 .wp-post-image {
@@ -11213,7 +11213,7 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
   max-width: 38rem;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 .entry-content li {
@@ -11261,6 +11261,45 @@ h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:
   text-decoration: none;
 }
 
+.category-mini-posts {
+  background-color: #fafbff;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  box-shadow: 0 0 5px #94caff;
+  border-bottom-width: 0;
+}
+
+.category-mini-posts .entry-footer {
+  margin-bottom: 0;
+}
+
+.category-mini-posts .entry-title::before {
+  content: "Mini Post:";
+  font-family: "Crimson Text", serif;
+  text-transform: none;
+  font-size: 1.4rem;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+@media screen and (min-width: 75rem) {
+  .category-mini-posts .entry-title {
+    display: flex;
+    align-items: center;
+  }
+  .category-mini-posts .entry-content-and-thumb {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .home .category-mini-posts .wp-post-image {
+    width: 25%;
+  }
+}
 /* pagination */
 .pagination {
   display: flex;
