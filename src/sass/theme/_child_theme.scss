@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
-.category-mini-posts {
+.category-mini-posts.post {
     background-color: $bg-extra-light;
     padding: 1rem;
     border-radius: 1rem;
@@ -217,11 +217,11 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-width: 0;
 }
 
-.category-mini-posts .entry-footer {
+.category-mini-posts.post .entry-footer {
     margin-bottom: 0;
 }
 
-.category-mini-posts .entry-title::before {
+.category-mini-posts.post .entry-title::before {
     content: 'Mini Post:';
     font-family: $body-text;
     text-transform: none;
@@ -232,19 +232,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (min-width: 75rem) {
-    .category-mini-posts .entry-title {
+    .category-mini-posts.post .entry-title {
         display: flex;
         align-items: center;
     }
 
-    .category-mini-posts .entry-content-and-thumb {
+    .category-mini-posts.post .entry-content-and-thumb {
         display: flex;
         gap: 1.5rem;
         align-items: flex-start;
     }
 
-    .home .category-mini-posts .wp-post-image {
+    .category-mini-posts.post .wp-post-image {
         width: 25%;
+    }
+
+    .single-post .category-mini-posts.post .wp-post-image {
+        width: 100%;
     }
 }
 
